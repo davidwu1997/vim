@@ -1,8 +1,14 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+ZSH_DISABLE_COMPFIX="true"
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/wuyichun1997/.oh-my-zsh"
+export ZSH="/Users/davidwu/.oh-my-zsh"
+export KUBECONFIG="/Users/davidwu/.kube/dev-k8s.conf"
+
+# Golang
+export GOBIN="/Users/davidwu/go/bin"
+export GOPRIVATE="gitlab.silkrode.com.tw"
+export PATH=$PATH:$GOBIN
 
 POWERLEVEL9K_CONTEXT_TEMPLATE='\uFCA4 David Wu'
 
@@ -96,7 +102,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git docker kubectl zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -125,3 +131,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+
+# git aliaes
+alias pull="git pull"
+
+# kubectl aliases
+alias kc="kubectl"
+alias kcx="kubectx"
