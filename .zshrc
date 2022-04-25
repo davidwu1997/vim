@@ -3,11 +3,11 @@
 ZSH_DISABLE_COMPFIX="true"
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/davidwu/.oh-my-zsh"
-export KUBECONFIG="/Users/davidwu/.kube/dev-k8s.conf"
+export KUBECONFIG=/Users/davidwu/.kube/config:/Users/davidwu/.kube/config-dev
 
 # Golang
 export GOBIN="/Users/davidwu/go/bin"
-export GOPRIVATE="gitlab.silkrode.com.tw"
+export GOPRIVATE="gitlab.wisers.com"
 export PATH=$PATH:$GOBIN
 
 POWERLEVEL9K_CONTEXT_TEMPLATE='\uFCA4 David Wu'
